@@ -1,0 +1,32 @@
+@mixin animate($animation, $duration, $time, $method){
+    animation: $animation $duration $time $method;
+}
+
+@mixin circleAnimate($name){
+    $top: (random(100) - 30) * 1%;
+    $left: (random(100) - 30) * 1%;
+    @keyframes #{$name} {
+        0% {
+            top: $top;
+            left: $left;
+        }
+        25% {
+            transform: scale(random(2));
+            top: (random(100) - 30) * 1%;
+            left: (random(100) - 30) * 1%;
+        }
+        50% {
+            top: (random(100) - 30) * 1%;
+            left: (random(100) - 30) * 1%;
+        }
+        75% {
+            transform: scale(random(2));
+            top: (random(100) - 30) * 1%;
+            left: (random(100) - 30) * 1%;
+        }
+        100% {
+            top: $top;
+            left: $left; 
+        }
+    }
+}
